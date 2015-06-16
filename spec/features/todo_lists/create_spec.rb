@@ -6,10 +6,7 @@ describe 'creating todo lists' do
     visit "/todo_lists"
     click_link 'New Todo list'
     expect(page).to have_content('New Todo List')
-  end
 
-  it 'creates a new todo item' do
-    visit '/todo_lists/new'
     fill_in "Title", with: "My todo list"
     fill_in "Description", with: "This is what I'm doing today."
     click_button "Create Todo list"
